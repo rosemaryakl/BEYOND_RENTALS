@@ -17,7 +17,7 @@ class PlanetsController < ApplicationController
     @planet = Planet.new(planet_params)
     @planet.user = @user
     if @planet.save
-      planet.save!
+      @planet.save!
       redirect_to planet_path(@planet)
     else
       render :new
@@ -40,10 +40,10 @@ class PlanetsController < ApplicationController
   def destroy
     if @planet.destroy
       flash[:success] = 'Object was successfully deleted.'
-      redirect_to root_path
+      redirect_to planets_path
     else
       flash[:error] = 'Something went wrong'
-      redirect_to root_path
+      redirect_to planets_path
     end
   end
 
