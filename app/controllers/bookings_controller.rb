@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.planet = @planet
     @booking.user = @user
     if @booking.save
-      planet.save!
+      booking.save!
       redirect_to booking_path(@booking)
     else
       render :new
