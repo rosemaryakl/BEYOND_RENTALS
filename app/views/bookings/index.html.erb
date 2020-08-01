@@ -1,0 +1,10 @@
+<div class="container">
+  Planet: <%= @planet.name %>
+  <ul>
+    <% @planet.bookings.each do |booking| %>
+      <li><%= booking.start_date %> - <%= booking.end_date %></li>
+    <% end %>
+  </ul>
+  <%= link_to "New booking", new_planet_booking_path %>
+  <%= link_to "Back to planets", planets_path %>
+</div>

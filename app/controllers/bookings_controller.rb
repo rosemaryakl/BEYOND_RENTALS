@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_planet, only: [:new, :create]
+  before_action :find_planet, only: [:new, :create, :index]
   before_action :find_booking, only: [:edit, :update, :show, :destroy]
 
   def index
@@ -20,8 +20,8 @@ class BookingsController < ApplicationController
     @booking.planet = @planet
     @booking.user = @user
     if @booking.save
-      booking.save!
-      redirect_to booking_path(@booking)
+      @booking.save!
+      redirect_to planet_booking_path(@planet, @booking)
     else
       render :new
     end
@@ -43,10 +43,11 @@ class BookingsController < ApplicationController
   def destroy
     if @booking.destroy
       flash[:success] = "Your booking has been deleted"
+      redirect_to bookings_path
     else
       flash[:error] = "Something went wrong"
+      redirect_to bookings_path
     end
-    redirect_to root_path
   end
 
   private
@@ -56,7 +57,8 @@ class BookingsController < ApplicationController
   end
 
   def find_planet
-    @planet = Planet.find(params[:id])
+    # @planet = Planet.find(params[:id])
+    @planet = Planet.find(params[:planet_id])
   end
 
   def find_booking
