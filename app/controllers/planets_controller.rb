@@ -9,14 +9,17 @@ class PlanetsController < ApplicationController
   end
   
   def new
+    @user = current_user
     @planet = Planet.new
   end
 
   def create
-    @planet = Planet.new(params[:planet])
+    @user = current_user
+    @planet = Planet.new(planet_params)
+    @planet.user = @user
     if @planet.save
       planet.save!
-      redirect_to @planet
+      redirect_to planet_path(@planet)
     else
       render :new
     end
@@ -27,22 +30,22 @@ class PlanetsController < ApplicationController
   
   def update
     @planet = Planet.find(params[:id])
-      if @planet.update_attributes(params[:planet])
+      if @planet.update_attributes(planet_params)
         flash[:success] = "Object was successfully updated"
-        redirect_to @planet
+        redirect_to planet_path(@planet)
       else
         flash[:error] = "Something went wrong"
-        render 'edit'
+        render :edit
       end
   end
 
   def destroy
     if @planet.destroy
       flash[:success] = 'Object was successfully deleted.'
-      redirect_to planets_url
+      redirect_to root_path
     else
       flash[:error] = 'Something went wrong'
-      redirect_to planets_url
+      redirect_to root_path
     end
   end
 
