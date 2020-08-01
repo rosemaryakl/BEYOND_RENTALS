@@ -1,0 +1,7 @@
+<%= @planet.name %>
+<%= @planet.size %>
+<hr>
+<%= link_to "back to base", planets_path %>
+<%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
+  <i class="fas fa-bomb"></i> Exterminate
+<% end %>
