@@ -4,10 +4,10 @@ class PlanetsController < ApplicationController
   def index
     @planets = Planet.all
   end
-  
+
   def show
   end
-  
+
   def new
     @user = current_user
     @planet = Planet.new
@@ -24,10 +24,10 @@ class PlanetsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
   end
-  
+
   def update
     @planet = Planet.find(params[:id])
       if @planet.update_attributes(planet_params)
@@ -54,7 +54,7 @@ class PlanetsController < ApplicationController
   def find_planet
     @planet = Planet.find(params[:id])
   end
-  
+
   def planet_params
     params.require(:planet).permit(:name, :size, :distance_from_sun, :price_per_day)
   end
