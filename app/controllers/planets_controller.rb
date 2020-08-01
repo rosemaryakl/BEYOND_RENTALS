@@ -29,14 +29,13 @@ class PlanetsController < ApplicationController
   end
   
   def update
-    @planet = Planet.find(params[:id])
-      if @planet.update_attributes(planet_params)
-        flash[:success] = "Object was successfully updated"
-        redirect_to planet_path(@planet)
-      else
-        flash[:error] = "Something went wrong"
-        render :edit
-      end
+    if @planet.update(planet_params)
+      flash[:success] = "Object was successfully updated"
+      redirect_to planet_path(@planet)
+    else
+      flash[:error] = "Something went wrong"
+      render :edit
+    end
   end
 
   def destroy
