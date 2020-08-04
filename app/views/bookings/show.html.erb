@@ -1,5 +1,25 @@
 <div class="container">
-  Start date: <%= @booking.start_date %>
-  End Date: <%= @booking.end_date %>
-  <%= link_to "Return to Bookings Page", planet_bookings_path %>
+  <div class="planet-name">
+    <h2>Your booking for: <%= @planet.name %></h2>
+  </div>
+  <div class="dates">
+    <div class="start-date">
+      <strong>Start date:</strong> <%= @booking.start_date %>
+    </div>
+    <div class="end-date">
+      <strong>End Date:</strong> <%= @booking.end_date %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="status-btn">
+    <button class="btn btn-primary">Accept booking request</button>
+    <%# if statement to check current_user against planet.user_id %>
+    <%# if match then show  %>
+  </div>
+  <br>
+  <br>
+  <div class="return-to-bookings-index">
+    <%= link_to "Return to Bookings Page", planet_bookings_path %>
+  </div>
 </div>

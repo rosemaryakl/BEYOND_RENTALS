@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_planet, only: [:new, :create, :index]
+  before_action :find_planet, only: [:new, :create, :index, :show]
   before_action :find_booking, only: [:edit, :update, :show, :destroy]
 
   def index
