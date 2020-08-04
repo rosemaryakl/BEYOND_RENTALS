@@ -1,2 +1,790 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7796a8">
+  <title>BEYOND RENTALS | Trips for Adventure
+  </title>
+  <link rel="stylesheet" href="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/theme.css?v=11135044714099330893"/>
+
+
+  <script>
+    //banner
+  var theme = {
+    strings: {
+      addToCart: "Add to cart",
+      soldOut: "Sold out",
+      unavailable: "Unavailable",
+      showMore: "Show More",
+      showLess: "Show Less",
+      addressError: "Error looking up that address",
+      addressNoResults: "No results for that address",
+      addressQueryLimit: "You have exceeded the Google API usage limit. Consider upgrading to a \u003ca href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\"\u003ePremium Plan\u003c\/a\u003e.",
+      authError: "There was a problem authenticating your Google Maps account."
+    },
+    currencySymbol: "£",
+    currencyIsoCode: "GBP"
+  }
+
+  // document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+</head>
+
+<body class="template-index">
+
+
+
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">Skip to content</a>
+
+  <div class="page-container page-container__index" id="PageContainer">
+
+    <div id="shopify-section-header" class="shopify-section">
+      <header role="banner">
+
+        <nav class="header grid-container grid-container--align-center grid-container--gutter site-wrapper--padding" data-section-id="header" data-section-type="header-section" role="navigation" aria-label="Primary">
+
+
+
+
+
+
+          <!--
+                 Nav
+              -->
+          <a href="//" class="headline header__logo__link grid-col-md-8 grid-col-lg-12" tabindex="0">
+
+                  Beyond Rentals
+
+
+
+          </a>
+
+          <ul class="header__menu grid-col-md-8 grid-col-lg-12">
+
+            <li>
+              <a href="planets" class="type">Book</a>
+            </li>
+
+            <li>
+              <a href="users" class="type">About</a>
+            </li>
+
+          </ul>
+
+          <ul class="header__menu-right">
+
+            <li>
+              <form method="post" action="/cart/update" id="currency_form_desktop" accept-charset="UTF-8" class="shopify-currency-form" enctype="multipart/form-data">
+                <input type="hidden" name="form_type" value="currency"/>
+                <input type="hidden" name="utf8" value="✓"/>
+                <input type="hidden" name="return_to" value="/"/>
+
+              </form>
+            </li>
+
+
+          </ul>
+
+          <div class="header__mobile grid-container grid-col-sm-6 grid-col-md-8 site-wrapper--padding ">
+
+          </div>
+
+        </nav>
+
+        <nav class="header--sticky row col col--full col--v-center " aria-hidden="true" aria-label="Secondary">
+
+
+
+
+
+
+          <!-- Desktop -->
+          <div class="header--sticky__desktop site-wrapper--padding row col-md-8 col-lg-12">
+            <div class="col-sm-3 col-md-4 col-lg-5">
+              <a href="/" class="headline header__logo__link">
+                      BEYOND RENTALS
+                    </a>
+            </div>
+            <div class="col-sm-9 col-md-4 col-lg-7">
+              <div class="row">
+                <div class="col-sm-10 col-md-4 col-lg-5">
+                  <ul class="header--sticky__desktop__menu left">
+
+                    <li>
+                      <a href="planets" class="type">Book</a>
+                    </li>
+
+                    <li>
+                      <a href="users" class="type">About</a>
+                    </li>
+
+                  </ul>
+                </div>
+                <div class="col-sm-2 col-md-4 col-lg-7">
+                  <ul class="header--sticky__desktop__menu right">
+                    <li>
+                      <form method="post" action="/cart/update" id="currency_form_desktop_sticky" accept-charset="UTF-8" class="shopify-currency-form" enctype="multipart/form-data">
+                        <input type="hidden" name="form_type" value="currency"/>
+                        <input type="hidden" name="utf8" value="✓"/>
+                        <input type="hidden" name="return_to" value="/"/>
+                        <select class="currency-select" name="currency" title="Select Currency">
+                          <option disabled>---</option>
+                          <option value="USD">$ USD</option>
+                          <option value="EUR">€ EUR</option>
+                          <option value="AUD">$ AUD</option>
+                          <option value="CAD">$ CAD</option>
+                          <option disabled>---</option>
+                          <option value="AED">د.إ AED</option>
+                          <option value="ANG">ƒ ANG</option>
+                          <option value="ARS">$ ARS</option>
+                          <option value="AWG">ƒ AWG</option>
+                          <option value="AZN">₼ AZN</option>
+                          <option value="BAM">КМ BAM</option>
+                          <option value="BBD">$ BBD</option>
+                          <option value="BGN">лв. BGN</option>
+                          <option value="BMD">$ BMD</option>
+                          <option value="BND">$ BND</option>
+                          <option value="BOB">Bs. BOB</option>
+                          <option value="BRL">R$ BRL</option>
+                          <option value="BSD">$ BSD</option>
+                          <option value="BWP">P BWP</option>
+                          <option value="BZD">$ BZD</option>
+                          <option value="CHF">CHF CHF</option>
+                          <option value="CLP">$ CLP</option>
+                          <option value="CNY">¥ CNY</option>
+                          <option value="CZK">Kč CZK</option>
+                          <option value="DJF">Fdj DJF</option>
+                          <option value="DKK">kr. DKK</option>
+                          <option value="EGP">ج.م EGP</option>
+                          <option value="ETB">Br ETB</option>
+                          <option value="FJD">$ FJD</option>
+                          <option value="FKP">£ FKP</option>
+                          <option value="GBP" selected="true">£ GBP</option>
+                          <option value="GEL">ლ GEL</option>
+                          <option value="GIP">£ GIP</option>
+                          <option value="GMD">D GMD</option>
+                          <option value="GTQ">Q GTQ</option>
+                          <option value="HKD">$ HKD</option>
+                          <option value="HNL">L HNL</option>
+                          <option value="HRK">kn HRK</option>
+                          <option value="ILS">₪ ILS</option>
+                          <option value="ISK">kr ISK</option>
+                          <option value="JPY">¥ JPY</option>
+                          <option value="KMF">Fr KMF</option>
+                          <option value="KYD">$ KYD</option>
+                          <option value="LSL">L LSL</option>
+                          <option value="MDL">L MDL</option>
+                          <option value="MOP">P MOP</option>
+                          <option value="MUR">₨ MUR</option>
+                          <option value="MVR">MVR MVR</option>
+                          <option value="MXN">$ MXN</option>
+                          <option value="MYR">RM MYR</option>
+                          <option value="NAD">$ NAD</option>
+                          <option value="NIO">C$ NIO</option>
+                          <option value="NOK">kr NOK</option>
+                          <option value="NZD">$ NZD</option>
+                          <option value="PAB">B/. PAB</option>
+                          <option value="PEN">S/. PEN</option>
+                          <option value="PGK">K PGK</option>
+                          <option value="PLN">zł PLN</option>
+                          <option value="QAR">ر.ق QAR</option>
+                          <option value="RON">Lei RON</option>
+                          <option value="RWF">FRw RWF</option>
+                          <option value="SAR">ر.س SAR</option>
+                          <option value="SBD">$ SBD</option>
+                          <option value="SCR">₨ SCR</option>
+                          <option value="SEK">kr SEK</option>
+                          <option value="SGD">$ SGD</option>
+                          <option value="SHP">£ SHP</option>
+                          <option value="SRD">$ SRD</option>
+                          <option value="SZL">E SZL</option>
+                          <option value="THB">฿ THB</option>
+                          <option value="TJS">ЅМ TJS</option>
+                          <option value="TOP">T$ TOP</option>
+                          <option value="TRY">₺ TRY</option>
+                          <option value="TTD">$ TTD</option>
+                          <option value="TWD">$ TWD</option>
+                          <option value="UAH">₴ UAH</option>
+                          <option value="UYU">$ UYU</option>
+                          <option value="VUV">Vt VUV</option>
+                          <option value="WST">T WST</option>
+                          <option value="XAF">Fr XAF</option>
+                          <option value="XCD">$ XCD</option>
+                          <option value="XOF">Fr XOF</option>
+                          <option value="XPF">Fr XPF</option>
+                          <option value="ZAR">R ZAR</option>
+                          <option value="ZMW">ZK ZMW</option>
+                        </select>
+                      </form>
+                    </li>
+                    <li class="type header__account-toggle">
+
+                      <a class="header__account type">Log In</a>
+
+                    </li>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </nav>
+
+        <div class="header--buybar row col col--full site-wrapper--padding">
+          <a href="//" class="header__logo__link col-sm-3 col-md-2 col-lg-3" aria-label="">
+            <?xml version="1.0" encoding="UTF-8"?>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-539.000000, -40.000000)" fill="">
+                  <g id="Nav" transform="translate(440.000000, 40.000000)">
+                    <g id="Logo" transform="translate(99.000000, 0.000000)">
+                      <polygon class="letter-6" id="Fill-13" points="204.69697 35 184.854955 21.1893561 184.854955 33.5813429 173.107931 33.5813429 173.107931 0 192.999221 13.8578619 192.999221 1.41895982 204.69697 1.41895982"></polygon>
+                      <path class="letter-5" d="M158.194384,18.7501486 C158.194384,15.8249911 155.847813,13.5035837 152.890947,13.5035837 C149.980934,13.5035837 147.634663,15.8249911 147.634663,18.7501486 C147.634663,21.628658 149.980934,23.9500654 152.890947,23.9500654 C155.847813,23.9500654 158.194384,21.628658 158.194384,18.7501486 M136.464646,18.7501486 C136.464646,9.74292166 143.786382,2.5 152.890947,2.5 C161.995511,2.5 169.317247,9.74292166 169.317247,18.7501486 C169.317247,27.7573755 161.995511,35 152.890947,35 C143.786382,35 136.464646,27.7573755 136.464646,18.7501486" id="Fill-11"></path>
+                      <path class="letter-4" d="M121.550998,18.7501486 C121.550998,15.8249911 119.204705,13.5035837 116.247812,13.5035837 C113.337773,13.5035837 110.99148,15.8249911 110.99148,18.7501486 C110.99148,21.628658 113.337773,23.9500654 116.247812,23.9500654 C119.204705,23.9500654 121.550998,21.628658 121.550998,18.7501486 M99.8213618,18.7501486 C99.8213618,9.74292166 107.142563,2.5 116.247812,2.5 C125.35246,2.5 132.673962,9.74292166 132.673962,18.7501486 C132.673962,27.7573755 125.35246,35 116.247812,35 C107.142563,35 99.8213618,27.7573755 99.8213618,18.7501486" id="Fill-9"></path>
+                      <path class="letter-3" d="M85.2367831,22.3344846 C85.2367831,21.6175571 84.6453757,20.9963627 83.9060377,20.9963627 L79.9630065,20.9963627 L79.9630065,23.624893 L83.9060377,23.624893 C84.6453757,23.624893 85.2367831,23.0514121 85.2367831,22.3344846 Z M79.9630065,13.8273934 L79.9630065,16.4559237 L83.3143149,16.4559237 C84.1031735,16.4559237 84.6945808,15.8824429 84.6945808,15.1655154 C84.6945808,14.4485879 84.1031735,13.8273934 83.3143149,13.8273934 L79.9630065,13.8273934 Z M96.0306771,25.7282677 C96.0306771,30.8418816 91.6933744,35 86.4688029,35 L68.2323232,35 L68.2323232,2.5 L84.2015837,2.5 C89.2290194,2.5 93.3691863,6.46695809 93.3691863,11.3897176 C93.3691863,13.779374 92.3835074,15.9304624 90.8553107,17.5074582 C93.9113886,19.0367404 96.0306771,22.1910379 96.0306771,25.7282677 Z" id="Fill-7"></path>
+                      <path class="letter-2" d="M49.1771735,26.0773613 L47.3837129,22.5775821 L45.5899421,26.0773613 L49.1771735,26.0773613 Z M51.5039257,30.6124997 L43.2631899,30.6124997 L41.0329204,35 L27.7983539,35 L47.3837129,0 L66.9687617,35 L53.7341952,35 L51.5039257,30.6124997 Z" id="Fill-4"></path>
+                      <path class="letter-1" d="M17.0044599,22.3344846 C17.0044599,21.6175571 16.4130525,20.9963627 15.6737145,20.9963627 L11.7306833,20.9963627 L11.7306833,23.624893 L15.6737145,23.624893 C16.4130525,23.624893 17.0044599,23.0514121 17.0044599,22.3344846 Z M11.7306833,13.8273934 L11.7306833,16.4559237 L15.0823071,16.4559237 C15.8708502,16.4559237 16.4622576,15.8824429 16.4622576,15.1655154 C16.4622576,14.4485879 15.8708502,13.8273934 15.0823071,13.8273934 L11.7306833,13.8273934 Z M27.7983539,25.7282677 C27.7983539,30.8418816 23.4610512,35 18.2364797,35 L0,35 L0,2.5 L15.9692604,2.5 C20.9966961,2.5 25.1368631,6.46695809 25.1368631,11.3897176 C25.1368631,13.779374 24.1511841,15.9304624 22.6229875,17.5074582 C25.6790653,19.0367404 27.7983539,22.1910379 27.7983539,25.7282677 Z" id="Fill-1"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <div class="header--buybar__title col col-md-4 col-lg-6">
+            <span class="type"></span>
+            <span class="header--buybar__title__variant small"></span>
+          </div>
+        </div>
+
+        <div class="account__overlay grid-container grid-container--gutter site-wrapper--padding">
+          <div class="account__overlay-content grid-col-sm-6 grid-col-md-5 grid-col-lg-4">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg class="account__overlay__close header__account-toggle" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-284.000000, -38.000000)" fill="">
+                  <g transform="translate(283.000000, 38.000000)">
+                    <rect transform="translate(10.500000, 10.000000) scale(-1, 1) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
+                    <rect transform="translate(10.500000, 10.000000) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <a class="headline header__mobile__logo__link account__logo grid-col-sm-6 grid-col-md-8" href="/">
+
+                    Beyond
+              <br>
+              Rentals
+
+            </a>
+            <div id="CustomerLoginForm" class="account__overlay-form">
+              <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8">
+                <input type="hidden" name="form_type" value="customer_login"/>
+                <input type="hidden" name="utf8" value="✓"/>
+
+                <p class="account__overlay-form-title type type--link">
+
+                            Login or
+                  <span class="btn--text account-create-toggle">Create an account</span>
+                </p>
+
+                <div class="input-container has-placeholder">
+                  <label for="CustomerEmail">Email</label>
+                  <input type="email" name="customer[email]" id="CustomerEmail" class="" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <div class="input-container has-placeholder">
+                  <label for="CustomerPassword">Password</label>
+                  <input type="password" value="" name="customer[password]" id="CustomerPassword" class="">
+                </div>
+
+                <div class="account__overlay-actions">
+
+                  <a href="#recover" id="RecoverPassword" class="type reset-toggle">Forgot your password?</a>
+
+                  <input type="submit" class="btn" value="Log In">
+                </div>
+
+              </form>
+            </div>
+
+            <div id="RecoverPasswordForm" class="account__overlay-form__recover hide" aria-hidden="true">
+
+              <div>
+                <h2>
+                  Reset your password</p>
+                  <p>We will send you an email to reset your password.</p>
+              </div>
+
+              <div class="form-vertical">
+                <form method="post" action="/account/recover" accept-charset="UTF-8">
+                  <input type="hidden" name="form_type" value="recover_customer_password"/>
+                  <input type="hidden" name="utf8" value="✓"/>
+
+                  <div class="input-container has-placeholder">
+                    <label for="RecoverEmail">Email</label>
+                    <input type="email" value="" name="email" id="RecoverEmail" class="input-full" autocorrect="off" autocapitalize="off">
+                  </div>
+
+                  <div class="account__overlay-actions">
+                    <input type="submit" class="btn" value="Submit">
+                    <button type="button" id="HideRecoverPasswordLink" class="btn--text reset-toggle">Cancel</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+
+            <div class="account__overlay-form__create hide" aria-hidden="true">
+              <form method="post" action="/account" id="create_customer" accept-charset="UTF-8">
+                <input type="hidden" name="form_type" value="create_customer"/>
+                <input type="hidden" name="utf8" value="✓"/>
+                <p class="account__overlay-form-title type type--link">
+                  <span class="btn--text account-create-toggle">Login</span>
+                   or Create an account
+
+                </p>
+
+                <div class="input-container has-placeholder">
+                  <label for="FirstName">First Name</label>
+                  <input type="text" name="customer[first_name]" id="FirstName">
+                </div>
+
+                <div class="input-container has-placeholder">
+                  <label for="LastName">Last Name</label>
+                  <input type="text" name="customer[last_name]" id="LastName">
+                </div>
+
+                <div class="input-container has-placeholder">
+                  <label for="Email">Email</label>
+                  <input type="email" name="customer[email]" id="Email" class="" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <div class="input-container has-placeholder">
+                  <label for="CreatePassword">Password</label>
+                  <input type="password" name="customer[password]" id="CreatePassword" class="">
+                </div>
+
+                <div class="account__overlay-actions">
+                  <input type="submit" value="Create" class="btn">
+                </div>
+              </form>
+            </div>
+
+<!--             <img class="account__overlay__illustration lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/baboon-log-in-illustration_800x.png?v=5815221032823465381" alt="login illustration"/>
+            <img class="account__overlay__create-illustration hide lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/baboon-create-account-illustration_800x.png?v=9558259789340523399" alt="login alternate illustration"/> -->
+          </div>
+        </div>
+
+        <div class="nav-overlay" aria-hidden="true">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg class="nav-overlay__close header__nav-toggle" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-284.000000, -38.000000)" fill="">
+                <g transform="translate(283.000000, 38.000000)">
+                  <rect transform="translate(10.500000, 10.000000) scale(-1, 1) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
+                  <rect transform="translate(10.500000, 10.000000) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          <ul class="nav-overlay__container">
+
+            <li>
+              <a href="/collections/all" class="featured featured--bold ">Shop</a>
+            </li>
+
+            <li>
+              <a href="/pages/about" class="featured featured--bold ">About</a>
+            </li>
+
+            <li class=" header__account-toggle">
+
+              <a class="featured featured--bold">Log In</a>
+
+            </li>
+
+            <li>
+              <form method="post" action="/cart/update" id="currency_form_mobile" accept-charset="UTF-8" class="shopify-currency-form" enctype="multipart/form-data">
+                <input type="hidden" name="form_type" value="currency"/>
+                <input type="hidden" name="utf8" value="✓"/>
+                <input type="hidden" name="return_to" value="/"/>
+
+              </form>
+            </li>
+
+          </ul>
+        </div>
+
+      </header>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/theme.js?v=2324234763005770139" defer="defer"></script>
+    <!--<![endif]-->
+    <!--[if lte IE 9]><script src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/theme.js?v=2324234763005770139"></script><![endif]-->
+
+    <main class="main-content" id="MainContent" role="main">
+      <!-- BEGIN content_for_index -->
+      <div id="shopify-section-1576146530914" class="shopify-section Homepage">
+        <div id="homepage" class="homepage">
+
+          <div>
+            <div class="collection-cta collection-cta--first collection-cta--center module row col--v-center">
+              <div class="col-sm-6 col-md-1 col-lg-1"></div>
+              <div class="col-sm-6 col-md-5 col-lg-5">
+                <div class="collection-cta-media">
+
+                  <a href="//" tabindex="-1" role="presentation">
+                    <%= image_tag "g12.png", :class => "collection-cta-media__image lazyload", size: "5px"  %>
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-8 col-lg-6 collection-cta--center-mobile">
+                <div class="collection-cta-meta">
+                  <h1 class="collection-cta-meta__title headline">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 678.8 197.64">
+                      <defs>
+                        <style>
+                        .cls-1 {
+                          fill: #fff;
+                        }
+                        </style>
+                      </defs>
+                      <title>Trips for Adventures</title>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                         <!--  <path class="cls-1" d="M220.29,38a16.87,16.87,0,0,1-16.82,16.83H176.91V.08H201A13.74,13.74,0,0,1,211.2,23,16.88,16.88,0,0,1,220.29,38ZM188.82,21.17h11.51A4.55,4.55,0,0,0,205,16.58a4.67,4.67,0,0,0-4.67-4.67H188.82Zm19.32,16c0-4.19-3.14-5.64-7.41-5.64H188.82V42.9h11.91C205,42.9,208.14,41.45,208.14,37.19Z"/>
+                          <path class="cls-1" d="M260.06,29.78v25h-6.84l-3.06-3.55a17.08,17.08,0,0,1-11.27,4.35c-8,0-14.89-6-14.89-14.08,0-7.25,4.83-11.84,14.08-13.61,6-1.13,10-2.82,8.37-5.31-1.12-1.61-3.86-1.85-6.19-1.53a8.27,8.27,0,0,0-5.88,4.19l-8.21-5.48c2.66-4.1,7.81-7.65,15.37-7.65C252.73,12.15,260.06,19.4,260.06,29.78Zm-11.67,9.66v-6.2c-1.21.89-4.75,1.69-7.41,2.18-4.59,1-5.8,3-5.8,5.15,0,3.22,2.74,5.47,6,5.47C244.84,46,248.39,43.06,248.39,39.44Z"/>
+                          <path class="cls-1" d="M312.22,13V48.54c0,12.31-9.42,22.38-22.46,23.26a21.45,21.45,0,0,1-17-6l7-7a12.91,12.91,0,0,0,20.36-7.32,21.74,21.74,0,1,1-12.71-39.37,21.56,21.56,0,0,1,14,5.16L305.38,13ZM300.3,34a10.91,10.91,0,1,0-10.86,10.87A11,11,0,0,0,300.3,34Z"/>
+                          <path class="cls-1" d="M327,39c1.29,2.74,4.26,7.08,9.17,7.49,3.95.4,6.68-.73,6.76-3s-3.38-3.7-7.8-5.88c-8.94-4.1-14.73-7-14.73-13.6,0-6.92,6.28-12.4,17-11.83a16.75,16.75,0,0,1,15.46,10.7L344,26c-1.29-2.33-2.9-4.43-6.6-5.07s-6.28,1.21-6.36,2.74c-.08,2,2.58,3,6.92,5.15,8.21,3.38,15.62,6.92,15.94,13.84.49,8.45-6.6,13-16.66,13s-16-5.79-19.24-12.88Z"/>
+                          <path class="cls-1" d="M399,11.91v9.26h18.75v11H399V54.82H387.07V0H423V11.91Z"/> -->
+                          <!-- <path class="cls-1" d="M424.91,33.89c0-13.12,10.22-21.74,23.58-21.74S472,20.77,472,33.89s-10.23,21.73-23.51,21.73S424.91,47,424.91,33.89Zm35.25,0c0-6.68-5.23-10.95-11.67-10.95s-11.67,4.27-11.67,11,5.15,11,11.67,11S460.16,40.57,460.16,33.89Z"/>
+                          <path class="cls-1" d="M504.35,13.68,501.54,25A9.06,9.06,0,0,0,496,23.59c-3.22.24-6,2.25-6,6.11V54.82H478.11V13h6.6l3.14,3.3a12,12,0,0,1,9.1-4.11A16,16,0,0,1,504.35,13.68Z"/> -->
+                          <path class="cls-1" d="M61.07,182.49H27.33L20.69,196.4H0L44.2,109,88.4,196.4H67.72Zm-7.63-15.88L44.2,147.15,35,166.61Z"/>
+                          <path class="cls-1" d="M159.81,103.66v83.72H149.72l-6.28-6.65a33.3,33.3,0,1,1-1.85-52.08v-25Zm-18.22,51.83A16.69,16.69,0,1,0,125,172.12,16.84,16.84,0,0,0,141.59,155.49Z"/>
+                          <path class="cls-1" d="M240.58,99.72l-36.32,67.72L167.2,99.72h20.56l16.37,32.14,16-32.14Z"/>
+                          <path class="cls-1" d="M273.38,165.3c9.24,0,15.27-3.69,17.86-10l16.25,4.31c-4.68,13.66-17.85,22-34.11,22-20.43,0-36.07-13.17-36.07-33.24s15.64-33.24,36.07-33.24c22.17,0,38.3,17.11,34.6,37.55H255.16C257.25,160.5,265,165.3,273.38,165.3Zm-15.63-26.6h31.39c-3.32-4.8-9.23-7.38-15.76-7.38S261.07,134.15,257.75,138.7Z"/>
+                          <path class="cls-1" d="M379.09,156.88V196.4H360.87V158.73a10.9,10.9,0,0,0-21.8,0V196.4H320.85v-64H331l5.17,5.42a25.71,25.71,0,0,1,43,19.08Z"/>
+                          <path class="cls-1" d="M414.92,147.28v26a6.2,6.2,0,0,0,6.28,6.15h1.47v18.23H421.2a24.43,24.43,0,0,1-24.38-24.38v-26H386.47v-14.9c8.75,0,13.55-9.36,13.55-19.7h14.9v19.7h8.61v14.9Z"/>
+                          <path class="cls-1" d="M490.35,183.22H480.28l-5.14-5.38a0,0,0,0,0,0,0,25.85,25.85,0,0,1-18.49,6.6c-13.78-.68-24.46-12.39-24.46-26.19v-39a0,0,0,0,1,0,0h18.16s0,0,0,0v37.64a10.9,10.9,0,1,0,21.8-.34v-37.3s0,0,0,0h18.15a0,0,0,0,1,0,0v64A0,0,0,0,1,490.35,183.22Z"/>
+                          <path class="cls-1" d="M542.84,106.42l-4.31,17.24a13.84,13.84,0,0,0-8.5-2.09c-4.92.37-9.11,3.45-9.11,9.36v38.41H502.7v-64h10.09l4.81,5a18.31,18.31,0,0,1,13.91-6.28A24.4,24.4,0,0,1,542.84,106.42Z"/>
+                          <path class="cls-1" d="M583.1,170.16c9.23,0,15.26-3.7,17.85-10l16.25,4.31c-4.68,13.67-17.85,22-34.1,22-20.44,0-36.08-13.17-36.08-33.24s15.64-33.24,36.08-33.24c22.16,0,38.29,17.11,34.59,37.55H564.87C567,165.36,574.72,170.16,583.1,170.16Zm-15.64-26.6h31.4c-3.33-4.8-9.24-7.39-15.76-7.39S570.78,139,567.46,143.56Z"/>
+                          <path class="cls-1" d="M637.64,172.27c2,4.19,6.52,10.84,14,11.45,6,.62,10.21-1.11,10.34-4.55s-5.17-5.67-11.95-9c-13.66-6.28-22.53-10.71-22.53-20.81,0-10.59,9.61-19,26-18.1,14.65.62,21.8,10.84,23.64,16.38l-13.54,4.68c-2-3.58-4.43-6.78-10.1-7.76s-9.6,1.85-9.72,4.18c-.13,3.08,3.94,4.68,10.58,7.88,12.56,5.18,23.89,10.59,24.38,21.18.74,12.93-10.09,19.83-25.48,19.83s-24.51-8.87-29.43-19.7Z"/>
+                        </g>
+                      </g>
+                    </svg>
+                  </h1>
+
+                  <a class="btn collection-cta-meta__button collection-cta-meta__button--padding-left" href="planets">Book Now</a>
+                </div>
+              </div>
+              <div class="collection-cta__background">
+                <svg viewBox="0 0 2880 425" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2880 465.1V0.0999756H2622.3C2413.9 0.0999756 2209.3 39 2029.9 112.8L2002.2 124.2C1822.7 198 1618.1 236.9 1409.8 236.9C1240.1 236.9 1072.4 262.7 918.4 312.6L809.7 347.8C655.8 397.7 488.1 423.5 318.3 423.5H0V465.1"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="collection-cta module collection-cta--left row col--v-center">
+              <div class="collection-cta--top col-sm-6 col-md-8 col-lg-1">
+                <div class="collection-cta-media collection-cta-media--right collection-cta-media--upwords  collection-cta-media--mobile">
+
+                  <a href="/collections/travel" tabindex="-1" role="presentation">
+                    <img class="collection-cta-media__image lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/94D74FCDAD19799-cropped_1600x.png?v=1576146703" src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/94D74FCDAD19799-cropped_100x.png?v=1576146703" alt="" sizes="100vw" width="1000" data-srcset="
+                                        //cdn.shopify.com/s/files/1/0078/6569/6313/files/94D74FCDAD19799-cropped_800x.png?v=1576146703 1x,
+                                        //cdn.shopify.com/s/files/1/0078/6569/6313/files/94D74FCDAD19799-cropped_1600x.png?v=1576146703 2x,
+                                        //cdn.shopify.com/s/files/1/0078/6569/6313/files/94D74FCDAD19799-cropped_2400x.png?v=1576146703 3x">
+                  </a>
+                </div>
+              </div>
+              <div class="collection-cta--top col-sm-6 col-md-8 col-lg-3">
+                <div class="collection-cta-meta collection-cta-meta--downwards">
+                  <h2 class="collection-cta-meta__title large--regular">
+                     Lorem</br>
+                    Ipsum
+                  </h2>
+
+                  <p class="collection-cta-meta__copy">Lorem ipsum dolor sit amet, sed do eiusmod videus chatum incididunt ut labore et dolore magna aliqua.Tellus rutrum</p>
+
+                  <a class="btn collection-cta-meta__button" href="/planets/">Explore </a>
+                </div>
+              </div>
+              <div class="collection-cta--top col-sm-6 col-md-8 col-lg-8">
+                <div class="collection-cta-media collection-cta-media--right collection-cta-media--upwords collection-cta-media--desktop">
+
+                 <a href="/planets/" tabindex="-1" role="presentation">
+
+                    <%= image_tag "planet2.png", :class => "collection-cta-media__image lazyload", size: "10px"  %>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="collection-cta__background collection-cta__background--flip">
+              <svg viewBox="0 0 2880 425" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2880 465.1V0.0999756H2622.3C2413.9 0.0999756 2209.3 39 2029.9 112.8L2002.2 124.2C1822.7 198 1618.1 236.9 1409.8 236.9C1240.1 236.9 1072.4 262.7 918.4 312.6L809.7 347.8C655.8 397.7 488.1 423.5 318.3 423.5H0V465.1"/>
+              </svg>
+            </div>
+
+            <div class="collection-cta collection-cta--third collection-cta--right module row col--v-center">
+              <div class="col-sm-6 col-md-8 col-lg-8">
+                <div class="collection-cta-media collection-cta-media--left">
+                  <a href="/planets/" tabindex="-1" role="presentation">
+
+                    <%= image_tag "planet5.png", :class => "collection-cta-media__image lazyload", size: "10px"  %>
+
+                  </a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-8 col-lg-3">
+                <div class="collection-cta-meta">
+                  <h2 class="collection-cta-meta__title large--regular">
+                    Lorem</br>
+                    Ipsum
+                  </h2>
+
+                  <p class="collection-cta-meta__copy">Lorem ipsum dolor sit amet, sed do eiusmod videus chatum incididunt ut labore et dolore magna aliqua.Tellus rutrum</p>
+
+                  <a class="btn collection-cta-meta__button" href="/planets/">Explore Trips</a>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-8 col-lg-1"></div>
+            </div>
+
+            <div class="collection-cta__background collection-cta__background--flip collection-cta__background--flip-bottom">
+              <svg viewBox="0 0 2880 425" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2880 465.1V0.0999756H2622.3C2413.9 0.0999756 2209.3 39 2029.9 112.8L2002.2 124.2C1822.7 198 1618.1 236.9 1409.8 236.9C1240.1 236.9 1072.4 262.7 918.4 312.6L809.7 347.8C655.8 397.7 488.1 423.5 318.3 423.5H0V465.1"/>
+              </svg>
+            </div>
+
+            <div class="collection-cta collection-cta--forth module collection-cta--left row col--v-center">
+              <div class="collection-cta--top col-sm-6 col-md-8 col-lg-1">
+                <div class="collection-cta-media collection-cta-media--right collection-cta-media--upwords  collection-cta-media--mobile">
+
+                   <a href="/planets/new" tabindex="-1" role="presentation">
+
+                    <%= image_tag "sun.png", :class => "collection-cta-media__image lazyload", size: "10px"  %>
+
+                  </a>
+
+                </div>
+              </div>
+              <div class="collection-cta--top col-sm-6 col-md-8 col-lg-3">
+                <div class="collection-cta-meta collection-cta-meta--downwards">
+                  <h2 class="collection-cta-meta__title large--regular">
+                    Lorem</br>
+                    Ipsum
+                  </h2>
+
+                  <p class="collection-cta-meta__copy">Lorem ipsum dolor sit amet, sed do eiusmod videus chatum incididunt ut labore et dolore magna aliqua.Tellus rutrum</p>
+
+                  <a class="btn collection-cta-meta__button" href="/planets/new">Add Planet</a>
+                </div>
+              </div>
+              <div class="collection-cta--top col-sm-6 col-md-8 col-lg-8">
+                <div class="collection-cta-media collection-cta-media--right collection-cta-media--desktop">
+
+                  <a href="/planets/new" tabindex="-1" role="presentation">
+
+                    <%= image_tag "sun.png", :class => "collection-cta-media__image lazyload", size: "10px"  %>
+
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <svg class="collection-cta__background collection-cta__background--bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 106.3">
+              <defs>
+                <rect x="0.8" y="-322.1" width="1438.5" height="550"/>
+              </defs>
+              <clipPath>
+                <use xlink:href="#SVGID_1_"/>
+              </clipPath>
+              <path class="st0" d="M1440.2 36.4v-1072.1H0.5V36.4h-176.9L-37.7 73.7c30.5 8.2 62.6 8.2 93 0l86-23.1c30.5-8.2 62.6-8.2 93 0l86 23.1c30.5 8.2 62.6 8.2 93 0l86-23.1c30.5-8.2 62.6-8.2 93 0l86 23.1c30.5 8.2 62.6 8.2 93 0l86-23.1c30.5-8.2 62.6-8.2 93 0l86 23.1c30.5 8.2 62.6 8.2 93 0l86-23.1c30.5-8.2 62.6-8.2 93 0l86 23.1c30.5 8.2 62.6 8.2 93 0L1626 36.4H1440.2z"/>
+            </svg>
+          </div>
+
+          <div id="expanded-press-module" class="expanded-press row site-wrapper--padding">
+            <h2 class="expanded-press__title col col-sm-10 col-md-6 col-lg-8">As Seen On The Internet</h2>
+            <div class="expanded-press__items col col-sm-6 col-md-6 col-lg-11 col--center">
+              <div class="row col--center">
+                <div class="col-sm-3 col-md-3 col-lg-2">
+                  <div class="expanded-press__items-item">
+                    <p class="quote active" data-tab="first">
+                                “Could probably survive the apocalypse”
+                              </p>
+                    <img class="logo lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/5831E88BA04AE987_1200x.png?v=1576146825" data-tab="first" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-2">
+                  <div class="expanded-press__items-item">
+                    <p class="quote quote--second" data-tab="second">
+                                “Lorem Ipsum”
+                              </p>
+                    <img class="logo lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/5831E88BA04AE989_1200x.png?v=1576146873" data-tab="second" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-2">
+                  <div class="expanded-press__items-item">
+                    <p class="quote quote--third" data-tab="third">
+                                “Lorem Ipsum”
+                              </p>
+                    <img class="logo lazyload logo--upwards" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/5831E88BA04AE9B9_1200x.png?v=1576146909" data-tab="third" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-2">
+                  <div class="expanded-press__items-item">
+                    <p class="quote quote--fourth" data-tab="fourth">
+                                “Lorem Ipsum”
+                              </p>
+                    <img class="logo lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/5831E88BA04AE964_1200x.png?v=1576146933" data-tab="fourth" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-2">
+                  <div class="expanded-press__items-item">
+                    <p class="quote quote--fifth" data-tab="fifth">
+                                “Lorem Ipsum”
+                              </p>
+                    <img class="logo lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/5831E88BA04AE967_1200x.png?v=1576147016" data-tab="fifth" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-2">
+                  <div class="expanded-press__items-item">
+                    <p class="quote quote--sixth" data-tab="sixth">
+                                “Lorem Ipsum”
+                              </p>
+                    <img class="logo lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/files/5831E88BA04AE9BB_1200x.png?v=1576147053" data-tab="sixth" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- END content_for_index -->
+
+      <div class="screensaver">
+        <img src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg enable-background='new 0 0 612 792' version='1.1' viewBox='0 0 612 792' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFB38;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='307.66' cy='377.01' r='269.83'/%3E%3Cellipse cx='239.69' cy='304.3' rx='29.64' ry='90.22'/%3E%3Cellipse cx='375.63' cy='304.3' rx='29.64' ry='90.22'/%3E%3Cpath d='m307.66 574.13c-99.04 0-179.62-80.57-179.62-179.61h11.54c0 92.68 75.4 168.07 168.07 168.07s168.07-75.4 168.07-168.07h11.54c0.02 99.04-80.56 179.61-179.6 179.61z'/%3E%3C/svg%3E" width="80" height="80" alt="screensaver ball"/>
+      </div>
+
+    </main>
+    <div id="shopify-section-footer" class="shopify-section">
+      <footer class="footer row col col--full site-wrapper--padding" role="contentinfo">
+        <div class="col-sm-12 col-md-8 col-lg-2"></div>
+        <ul class="footer__menu col-sm-12 col-md-8 col-lg-8">
+
+          <li>
+            <a href="//" class="type">FAQ</a>
+          </li>
+
+          <li>
+            <a href="//" class="type">Contact</a>
+          </li>
+
+
+        </ul>
+        <ul class="footer__social-links col-sm-12 col-md-8 col-lg-2">
+
+          <li>
+            <a href="//" target="_blank">
+              <img width="50" height="auto" class="lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/social_instagram_01.png?v=13219043881283277671" alt="Instagram"/>
+            </a>
+          </li>
+
+          <li>
+            <a href="//" target="_blank">
+              <img width="50" height="auto" class="lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/social_twitter_01.png?v=6926024312470707691" alt="Twitter"/>
+            </a>
+          </li>
+
+          <li>
+            <a href="//" target="_blank">
+              <img width="50" height="auto" class="lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/social_youtube_01.png?v=4398300105944963082" alt="YouTube"/>
+            </a>
+          </li>
+
+        </ul>
+        <p class="back-to-top">
+          <span class="back-to-top__copy btn--text">Back to top</span>
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg class="back-to-top__icon" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Account" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Account_DSK_Add-Address" transform="translate(-1188.000000, -1555.000000)">
+                <g id="Footer" transform="translate(0.000000, 1556.000000)">
+                  <g id="Up" transform="translate(1086.000000, 0.000000)">
+                    <g id="Group-6" transform="translate(123.000000, 20.000000) rotate(-90.000000) translate(-123.000000, -20.000000) translate(103.000000, 0.000000)">
+                      <text id="&gt;-copy-2" class="arrow" font-family="SWBaboonType-Light, SW Baboon Type" font-size="26" font-weight="300" line-spacing="30" fill="">
+                        <tspan x="15" y="28">&gt;</tspan>
+                      </text>
+                      <rect id="Rectangle-4" class="border" stroke="" stroke-width="2" x="0" y="0" width="40" height="40"></rect>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </p>
+
+      </footer>
+
+
+
+    </div>
+  </div>
+  <div class="newsletter-popup row">
+    <form id="email_signup_popup" class="newsletter-popup__form klaviyo_bare_embed_KeuVyT col" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate" role="form">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg class="newsletter-popup__close" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-284.000000, -38.000000)" fill="">
+            <g transform="translate(283.000000, 38.000000)">
+              <rect transform="translate(10.500000, 10.000000) scale(-1, 1) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
+              <rect transform="translate(10.500000, 10.000000) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <h2 class="newsletter-popup__title featured featured--bold">EMAIL ME</h2>
+      <p class="newsletter-popup__copy type">
+        Lorem ipsum dolor sit amet, sed do eiusmod videus chatum incididunt ut labore et dolore magna aliqua.
+        <br/>
+
+       Lorem ipsum dolor
+      </p>
+      <input type="hidden" name="g" value="KeuVyT">
+      <div class="klaviyo_field_group input-group newsletter-popup__input-group row">
+        <label for="k_id_email_popup" class="visually-hidden">Email</label>
+        <input type="email" value="" name="email" class="newsletter-popup__input col-lg-9" id="
+        " placeholder="Email address" required/>
+        <div class="klaviyo_messages">
+          <div class="success_message" style="display:none;">
+            <span class="newsletter-popup__success">
+                        SUCCESS.
+                      </span>
+          </div>
+        </div>
+        <button type="submit" class="klaviyo_submit_button newsletter-popup__button col-lg-3">GO</button>
+        <div class="error_message" style="display:none;">Invalid email, give it another shot.</div>
+      </div>
+    </form>
+  </div>
+  <section>
+   <%= image_tag "WAI_Globe_720p_D1.gif", :class => "footer__newsletter dino row col col--v-center site-wrapper--padding lazyload", width: "1280px" %>
+
+    <h5 class="footer__newsletter__title large large--bold col col-sm-6 col-md-6 col-lg-6">Accept the Mystery</h5>
+
+  </section>
+
+
+
