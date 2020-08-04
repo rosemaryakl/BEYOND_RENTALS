@@ -6,3 +6,5 @@
 <%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
   <i class="fas fa-bomb"></i> Exterminate
 <% end %>
+<%= link_to "Show this planet's bookings", planet_bookings_path(@planet, @booking) %>
+
