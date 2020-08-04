@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    # current_user only for bookings and for specific planet
   end
 
   def show

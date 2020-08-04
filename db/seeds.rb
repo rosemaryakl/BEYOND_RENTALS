@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Planet seeds
+mercury = Planet.new({name: 'Mercury', size: 2439.7, distance_from_sun: 57.91, price_per_day: 872})
+venus = Planet.new({name: 'Venus', size: 6051.8, distance_from_sun: 108.2, price_per_day: 123})
+mars = Planet.new({name: 'Mars', size: 3389.5, distance_from_sun: 227.9, price_per_day: 222})
+jupiter = Planet.new({name: 'Jupiter', size: 69911, distance_from_sun: 778.5, price_per_day: 947})
+saturn = Planet.new({name: 'Saturn', size: 58232, distance_from_sun: 1434000, price_per_day: 142})
+uranus = Planet.new({name: 'Uranus', size: 25362, distance_from_sun: 2871000, price_per_day: 654})
+neptune = Planet.new({name: 'Neptune', size: 24622, distance_from_sun: 7618000, price_per_day: 787})
+tatooine = Planet.new({name: 'Tatooine', size: 10465, distance_from_sun: 4863000, price_per_day: 15687})
+corusant = Planet.new({name: 'Corusant', size: 12240, distance_from_sun: 73491990, price_per_day: 8746})
+LV = Planet.new({name: 'LV-426', size: 1200, distance_from_sun: 1204004, price_per_day: 69561})
+cybertron = Planet.new({name: 'Cybertron', size: 6300, distance_from_sun: 999999, price_per_day: 654})
+krypton = Planet.new({name: 'Krypton', size: 6370, distance_from_sun: 10000001, price_per_day: 123748})
