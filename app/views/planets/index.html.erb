@@ -1,8 +1,18 @@
-<ul>
-<% @planets.each do |planet| %>
-  <li>
-    <%= link_to planet.name, planet_path(planet) %>
-  </li>
-<% end %>
-</ul>
-<%= link_to "Add planet", new_planet_path %>
+<div class="container">
+  <% if @planets.any? %>
+    <div class="planet-list">
+      <ul>
+      <% @planets.each do |planet| %>
+        <li>
+          <%= link_to planet.name, planet_path(planet) %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <h3>There are no planets, please check back later for any new listings.</h3>
+  <% end %>
+  <div class="add-planet-link">
+    <%= link_to "Add planet", new_planet_path, class: "btn btn-primary" %>
+  </div>
+</div>
