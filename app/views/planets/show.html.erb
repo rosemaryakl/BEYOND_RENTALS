@@ -1,10 +1,10 @@
 <div class="container">
   <h2>Planet name: <%= @planet.name %></h2>
   <br>
-  Size: <%= @planet.size %> miles sq
+  Size: <%= @planet.size %> KM
   <br>
   <br>
-  Distance from Earth: <%= @planet.distance_from_sun %> million miles
+  Distance from Earth: <%= @planet.distance_from_sun %> KM
   <br>
   <br>
   Price per day: £<%= @planet.price_per_day %>
@@ -16,7 +16,12 @@
   <%= link_to "Book this planet", new_planet_booking_path(@planet), class: "btn btn-success" %>
   <br>
   <br>
-  <%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
-    <i class="fas fa-bomb"></i> Exterminate
+  
+  <% if @user.id == @planet.user_id %>
+    <div class="delete-btn">
+      <%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
+        <i class="fas fa-bomb"></i> Exterminate
+      <% end %>
+    </div>  
   <% end %>
 </div>
