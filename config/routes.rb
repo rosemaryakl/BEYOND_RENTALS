@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [:show]
   resources :planets do
-    resources :bookings
+    resources :bookings do
+      member do
+        patch :accept
+      end
+    end
   end
 end

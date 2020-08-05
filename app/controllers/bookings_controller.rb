@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
-  before_action :find_planet, only: [:new, :create, :index, :show]
-  before_action :find_booking, only: [:edit, :update, :show, :destroy]
+  before_action :find_planet, only: [:new, :create, :index, :show, :accept]
+  before_action :find_booking, only: [:edit, :update, :show, :destroy, :accept]
 
   def index
+    @user = current_user
     @bookings = Booking.all
-    # current_user only for bookings and for specific planet
   end
 
   def show
@@ -51,6 +51,11 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accept
+    @booking.update(status: true)
+    @booking.save!    
+  end
+
   private
 
   def booking_params
@@ -58,7 +63,6 @@ class BookingsController < ApplicationController
   end
 
   def find_planet
-    # @planet = Planet.find(params[:id])
     @planet = Planet.find(params[:planet_id])
   end
 
