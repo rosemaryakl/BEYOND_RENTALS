@@ -1,10 +1,46 @@
 <div class="container">
-  Planet: <%= @planet.name %>
-  <ul>
-    <% @planet.bookings.each do |booking| %>
-      <li><%= booking.start_date %> - <%= booking.end_date %></li>
+  <h2>Your bookings for <strong><%= @planet.name %></strong></h2>
+  <br>
+  <ul class="booking-list">
+    <% @bookings.sort.each do |booking| %>
+      <% if @user.id == booking.planet_id %>
+        <li>
+          <h3>Booking <%= booking.id %></h3>
+          <ul>
+            <li>
+              <p class="booking-index-start-date">Start date: <%= booking.start_date %></p>
+            </li>
+            <li>
+              <p class="booking-index-end-date">End date: <%= booking.end_date %></p>
+            </li>
+          </ul>
+          <div class="status-info">
+            <div class="status-msg">
+              <% if booking.status %>
+                <h3 class="booking-accepted">Booking accepted</h3>
+              <% else %>
+                <h3 class="booking-not-yet-accepted">Booking not yet accepted</h3>
+              <% end %>
+            </div>
+            <br>
+            <% if !booking.status %>
+              <%= link_to accept_planet_booking_path(booking, @planet), method: :patch, remote: true do %>
+                <button class="btn btn-primary accept-booking-request">Accept booking request</button>
+              <% end %>
+            <% else %>
+              <button class="btn btn-primary disabled-btn" disabled = true>Booking accepted</button>
+            <% end %>
+            <br>
+            <br>
+            <br>
+          </div>
+        </li>
+      <% end %>
     <% end %>
   </ul>
-  <%= link_to "New booking", new_planet_booking_path %>
-  <%= link_to "Back to planets", planets_path %>
+  <br>
+  <%= link_to "New booking", new_planet_booking_path, class: "btn btn-primary" %>
+  <br>
+  <br>
+  <%= link_to "Back to planets", planets_path, class: "btn btn-primary" %>
 </div>
