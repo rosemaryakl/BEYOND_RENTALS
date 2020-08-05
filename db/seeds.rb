@@ -1,3 +1,9 @@
+# Delete all previous instances of Users, Planets & Bookings
+Booking.delete_all
+Planet.delete_all
+User.delete_all
+
+
 # User seeds
 users = [
   renter_user = ['renter@user.com', '123456'],
