@@ -21,6 +21,7 @@ end
 
 # Planet seeds
 
+
 planets = [
   ['Mercury', 2440, 58, 872, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/mercury_foe8oi.jpg'],
   ['Venus', 6052, 108, 123, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/venus_ebjfdb.jpg'],
