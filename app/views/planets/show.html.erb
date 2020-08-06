@@ -1,6 +1,8 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @planet.image %>)">
+    <h1><%= @planet.name %></h1>
+</div>
 <div class="container">
   <div class="planet-info">
-    <h2>Planet name: <%= @planet.name %></h2>
     <br>
     Size: <%= @planet.size %> km
     <br>
@@ -9,9 +11,6 @@
     <br>
     <br>
     Price per day: £<%= @planet.price_per_day %>
-    <br>
-    <br>
-    <%= image_tag(@planet.image, :alt => "planet-img", size: '400x400') %>
   </div>
   <br>
   <br>
@@ -26,9 +25,8 @@
     </div>
   <% else %>
     <div class="renter-links">
-      <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
-      <br>
       <%= link_to "Book this planet", new_planet_booking_path(@planet), class: "btn btn-success" %>
+      <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>

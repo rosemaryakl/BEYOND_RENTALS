@@ -1,15 +1,18 @@
-<div class="container">
+<div id="planets-gallery" class="container">
+  <div class="d-flex justify-content-between flex-wrap">
   <% if @planets.any? %>
-    <div class="planet-list">
-      <ul>
       <% @planets.each do |planet| %>
-        <li>
-          <%= link_to planet.name, planet_path(planet) %>
-        </li>
+        <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= planet.image %>)">
+          <h1><%= link_to planet.name, planet_path(planet) %></h1>
+        </div>
       <% end %>
-      </ul>
-    </div>
   <% else %>
     <h3>There are no planets, please check back later for any new listings.</h3>
   <% end %>
+  </div>
 </div>
+
+
+
+
+
