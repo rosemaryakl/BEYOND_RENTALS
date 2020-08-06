@@ -44,17 +44,3 @@ planets = [
 planets.each do |name, size, distance_from_sun, price_per_day, image|
   Planet.create(name: name, size: size, distance_from_sun: distance_from_sun, price_per_day: price_per_day, image: image, user_id: 2)
 end
-
-
-# Booking seeds
-
-planet_list = Planet.all
-
-# 2 bookings is created for every planet that was generated above in the seed file, with the same data.
-# The booking is assigned to the test_user that was created in the seed file above.
-# This is so that the owner is not the renter as well.
-
-planet_list.each do |planet|
-  Booking.create(start_date: Date.parse("Jan 1 2021"), end_date: Date.parse("Jan 2 2021"), planet_id: planet.id, user_id: 1)
-  Booking.create(start_date: Date.parse("Feb 9 2022"), end_date: Date.parse("Feb 10 2022"), planet_id: planet.id, user_id: 1)
-end
