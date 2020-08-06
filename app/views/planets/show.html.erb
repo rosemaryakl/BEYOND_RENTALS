@@ -1,27 +1,34 @@
 <div class="container">
-  <h2>Planet name: <%= @planet.name %></h2>
+  <div class="planet-info">
+    <h2>Planet name: <%= @planet.name %></h2>
+    <br>
+    Size: <%= @planet.size %> km
+    <br>
+    <br>
+    Distance from Earth: <%= @planet.distance_from_sun %> million km
+    <br>
+    <br>
+    Price per day: £<%= @planet.price_per_day %>
+    <br>
+    <br>
+    <%= image_tag(@planet.image, :alt => "planet-img", size: '400x400') %>
+  </div>
   <br>
-  Size: <%= @planet.size %> km
   <br>
   <br>
-  Distance from Earth: <%= @planet.distance_from_sun %> million km
-  <br>
-  <br>
-  Price per day: £<%= @planet.price_per_day %>
-  <hr>
-  <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
-  <br>
-  <br>
-
-  <%= link_to "Book this planet", new_planet_booking_path(@planet), class: "btn btn-success" %>
-  <br>
-  <br>
-  
-  <% if @user.id == @planet.user_id %>
-    <div class="delete-btn">
+  <% if current_user.id == @planet.user_id %>
+    <div class="owner-links">
+      <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
+      <br>
       <%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
         <i class="fas fa-bomb"></i> Exterminate
       <% end %>
-    </div>  
+    </div>
+  <% else %>
+    <div class="renter-links">
+      <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
+      <br>
+      <%= link_to "Book this planet", new_planet_booking_path(@planet), class: "btn btn-success" %>
+    </div>
   <% end %>
 </div>
