@@ -4,13 +4,16 @@
 <div class="container">
   <div class="planet-info">
     <br>
-    Size: <%= @planet.size %> km
+    <strong>Size:</strong> <%= @planet.size %> km
     <br>
     <br>
-    Distance from Earth: <%= @planet.distance_from_sun %> million km
+    <strong>Distance from Earth:</strong> <%= @planet.distance_from_sun %> million km
     <br>
     <br>
-    Price per day: £<%= @planet.price_per_day %>
+    <strong>Price per day:</strong> £<%= @planet.price_per_day %>
+    <br>
+    <br>
+    <strong>Description:</strong> <%= @planet.description %>
   </div>
   <br>
   <br>
