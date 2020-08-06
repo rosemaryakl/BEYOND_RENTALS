@@ -26,14 +26,22 @@ end
 planets = [
   ['Mercury', 2440, 58, 872, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/mercury_foe8oi.jpg'],
   ['Venus', 6052, 108, 123, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/venus_ebjfdb.jpg'],
-  ['Mars', 3390, 228, 222, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/mars_zg2snb.jpg'],
+  ['Mars', 3390, 228, 222, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/mars_zg2snb.jpg',
+    "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being only larger than Mercury.
+    In English, Mars carries the name of the Roman god of war and is often referred to as the \"Red Planet\"."],
   ['Jupiter', 69911, 778.5, 947, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650598/Planets/jupiter_jig2dr.jpg'],
-  ['Saturn', 58232, 1434000, 142, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/saturn_jhr4ir.jpg'],
+  ['Saturn', 58232, 1434000, 142, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/saturn_jhr4ir.jpg',
+    "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter.
+    It is a gas giant with an average radius of about nine times that of Earth. It only has one-eighth the average density of Earth; however,
+    with its larger volume, Saturn is over 95 times more massive."],
   ['Uranus', 25362, 2871000, 654, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/uranus_b6o9sn.jpg'],
   ['Neptune', 24622, 7618000, 787, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/neptune_qfdkiu.jpg'],
   ['Tatooine', 10465, 4863000, 15687, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650597/Planets/tatooine_jehwky.png'],
   ['Corusant', 12240, 73491990, 8746, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650595/Planets/curosant_lvdfs4.jpg'],
-  ['LV-426', 1200, 1204004, 69561, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/LV426_eb2yza.png'],
+  ['LV-426', 1200, 1204004, 69561, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/LV426_eb2yza.png',
+    "Despite its small size, it maintains a surface gravity equivalent to 0.86 of that on Earth, indicating it is largely composed
+    of incredibly dense materials. Its rotational period is about 2 hours. The moon's crust is made up of aluminum silicates,
+    although there is evidence of magnesium silicate intrusion, manifested on the surface as basalt, rhyolite and microgranite lava flows."],
   ['Cybertron', 6300, 999999, 654, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/cybertron_e4bsex.jpg'],
   ['Krypton', 6370, 100001, 123748, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/krypton_ul1rbx.jpg']  
 ]
@@ -41,6 +49,6 @@ planets = [
 # The planets will be assigned to the owner_user.
 # This will ensure that booking requests are separate from the owner
 
-planets.each do |name, size, distance_from_sun, price_per_day, image|
-  Planet.create(name: name, size: size, distance_from_sun: distance_from_sun, price_per_day: price_per_day, image: image, user_id: 2)
+planets.each do |name, size, distance_from_sun, price_per_day, image, description|
+  Planet.create(name: name, size: size, distance_from_sun: distance_from_sun, price_per_day: price_per_day, image: image, description: description, user_id: 2)
 end
