@@ -6,7 +6,6 @@ class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
     @user = current_user
-    # @planet = Planet.where(id: booking.planet_id)
   end
 
   def show
