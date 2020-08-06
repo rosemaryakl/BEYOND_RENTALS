@@ -3,7 +3,7 @@
   <br>
   <ul class="booking-list">
     <% @bookings.sort.each do |booking| %>
-      <% if @user.id == booking.planet_id %>
+      <% if @planet.user == @user %>
         <li>
           <h3>Booking <%= booking.id %></h3>
           <ul>
@@ -24,7 +24,7 @@
             </div>
             <br>
             <% if !booking.status %>
-              <%= link_to accept_planet_booking_path(booking, @planet), method: :patch, remote: true do %>
+              <%= link_to accept_planet_booking_path(@planet, booking), method: :patch, remote: true do %>
                 <button class="btn btn-primary accept-booking-request">Accept booking request</button>
               <% end %>
             <% else %>
