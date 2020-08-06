@@ -1,9 +1,8 @@
 <div class="container">
-  <h2>Your bookings for <strong><%= @planet.name %></strong></h2>
   <br>
   <ul class="booking-list">
     <% @bookings.sort.each do |booking| %>
-      <% if @planet.user == @user %>
+      <% if booking.user_id == @user.id %>
         <li>
           <h3>Booking <%= booking.id %></h3>
           <ul>
@@ -17,30 +16,27 @@
           <div class="status-info">
             <div class="status-msg">
               <% if booking.status %>
-                <h3 class="booking-accepted">Booking accepted</h3>
+                <p class="booking-accepted">Booking accepted</p>
               <% else %>
-                <h3 class="booking-not-yet-accepted">Booking not yet accepted</h3>
+                <p class="booking-not-yet-accepted">Booking not yet accepted</p>
               <% end %>
             </div>
             <br>
-            <% if !booking.status %>
-              <%= link_to accept_planet_booking_path(booking, @planet), method: :patch, remote: true do %>
-                <button class="btn btn-primary accept-booking-request">Accept booking request</button>
-              <% end %>
-            <% else %>
-              <button class="btn btn-primary disabled-btn" disabled = true>Booking accepted</button>
-            <% end %>
+            <%# if !booking.status %>
+              <%#= link_to accept_planet_booking_path(@planet, booking), method: :patch, remote: true do %>
+                <%# <button class="btn btn-primary accept-booking-request">Accept booking request</button> %>
+              <%# end %>
+            <%# else %>
+              <%# <button class="btn btn-primary disabled-btn" disabled = true>Booking accepted</button> %>
+            <%# end %>
             <br>
             <br>
             <br>
           </div>
         </li>
+        <% else %>
+          Test
       <% end %>
     <% end %>
   </ul>
-  <br>
-  <%= link_to "New booking", new_planet_booking_path, class: "btn btn-primary" %>
-  <br>
-  <br>
-  <%= link_to "Back to planets", planets_path, class: "btn btn-primary" %>
 </div>
