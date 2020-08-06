@@ -3,7 +3,7 @@
   <br>
   <ul class="booking-list">
     <% @bookings.sort.each do |booking| %>
-      <% if @user.id == booking.planet_id %>
+      <% if @planet.user == @user %>
         <li>
           <h3>Booking <%= booking.id %></h3>
           <ul>
