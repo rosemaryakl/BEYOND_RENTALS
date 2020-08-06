@@ -1,10 +1,12 @@
 class BookingsController < ApplicationController
-  before_action :find_planet, only: [:new, :create, :index, :show, :accept]
+  before_action :find_user, only: :show
+  before_action :find_planet, only: [:new, :create, :show, :accept]
   before_action :find_booking, only: [:edit, :update, :show, :destroy, :accept]
 
   def index
-    @user = current_user
     @bookings = Booking.all
+    @user = current_user
+    # @planet = Planet.where(id: booking.planet_id)
   end
 
   def show
@@ -22,7 +24,7 @@ class BookingsController < ApplicationController
     @booking.user = @user
     if @booking.save
       @booking.save!
-      redirect_to planet_booking_path(@planet, @booking)
+      redirect_to user_bookings_path(@user)
     else
       render :new
     end
@@ -60,6 +62,10 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
+  end
+
+  def find_user
+    @user = User.find(params[:user_id])
   end
 
   def find_planet
