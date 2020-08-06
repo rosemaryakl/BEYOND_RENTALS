@@ -55,13 +55,13 @@ class BookingsController < ApplicationController
 
   def accept
     @booking.update(status: true)
-    @booking.save!    
+    @booking.save!
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :message)
   end
 
   def find_user
