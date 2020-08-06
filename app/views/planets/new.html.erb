@@ -1,15 +1,15 @@
-<h1>create a planet</h1>
-
-
 <div class="container">
-  <%= simple_form_for (@planet) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :size %>
-  <%= f.input :distance_from_sun, placeholder: 'Indicate distance in millions' %>
-  <%= f.input :price_per_day %>
-  <%= f.input :image %>
-  <%= f.submit %>
+  <h1><strong>Create a planet</strong></h1>
+  <div class="new-planet-form">
+    <%= simple_form_for (@planet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :size, placeholder: 'Radius in km'%>
+    <%= f.input :distance_from_sun, placeholder: 'Distance in million km' %>
+    <%= f.input :price_per_day %>
+    <%= f.input :image, placeholder: 'Please add a link to your image' %>
+    <%= f.submit %>
+  </div>
+  <% end %>
 </div>
-
-<% end %>
 
