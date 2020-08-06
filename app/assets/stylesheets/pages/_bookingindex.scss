@@ -1,0 +1,59 @@
+body {
+  height: fit-content;
+}
+
+.your-bookings-header {
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 10px;
+}
+
+// PLANET LIST
+
+.booking-list {
+  margin: 20px 0px;
+  padding-bottom: 2px;
+  border-top: 2px solid #000000;
+}
+
+// PLANET NAME
+.planet-name {
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+li.booking-info {
+  list-style: none;
+  margin: 0px 0px 50px 0px;
+  border-bottom: 2px solid #000000;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// BOOKING DATES
+.booking-dates {
+  color: #3a1bec;
+  margin-bottom: 30px;
+}
+
+.booking-dates li {
+  list-style: none;
+}
+
+
+// BOOKING STATUS
+.status-info p.booking-accepted {
+  color: #409b40;
+  border: 2px solid #409b40;
+  margin-right: 906px;
+  padding: 8px;
+  text-align: center;
+}
+
+.status-info p.booking-not-yet-accepted {
+  color: #9b4040;
+  border: 2px solid #9b4040;
+  margin-right: 841px;
+  padding: 8px;
+  text-align: center;
+}

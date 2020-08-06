@@ -34,7 +34,7 @@ planets = [
   ['Tatooine', 10465, 4863000, 15687, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650597/Planets/tatooine_jehwky.png'],
   ['Corusant', 12240, 73491990, 8746, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650595/Planets/curosant_lvdfs4.jpg'],
   ['LV-426', 1200, 1204004, 69561, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/LV426_eb2yza.png'],
-  ['Cyberton', 6300, 999999, 654, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/cybertron_e4bsex.jpg'],
+  ['Cybertron', 6300, 999999, 654, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/cybertron_e4bsex.jpg'],
   ['Krypton', 6370, 100001, 123748, 'https://res.cloudinary.com/dinzvmaaw/image/upload/v1596650596/Planets/krypton_ul1rbx.jpg']  
 ]
 
