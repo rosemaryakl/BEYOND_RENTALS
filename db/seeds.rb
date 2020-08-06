@@ -10,6 +10,7 @@ users = [
   owner_user = ['owner@user.com', '123456']
 ]
 
+
 # 2 user are created with basic '123456' passwords, for the purposes of testing.
 # The new bookings generated in the seed file below, will be assigned to this renter_user, so that the owner_user
 # can see these bookings, and accept them, or the renter_user can view his requested bookings

@@ -24,7 +24,7 @@
             </div>
             <br>
             <% if !booking.status %>
-              <%= link_to accept_planet_booking_path(@planet, booking), method: :patch, remote: true do %>
+              <%= link_to accept_planet_booking_path(booking, @planet), method: :patch, remote: true do %>
                 <button class="btn btn-primary accept-booking-request">Accept booking request</button>
               <% end %>
             <% else %>
