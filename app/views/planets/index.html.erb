@@ -1,8 +1,44 @@
-<ul>
-<% @planets.each do |planet| %>
-  <li>
-    <%= link_to planet.name, planet_path(planet) %>
-  </li>
-<% end %>
-</ul>
-<%= link_to "Add planet", new_planet_path %>
+<div class = background >
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;
+ <%= link_to new_planet_path do %>
+    <button class="buttonsubmit2" href="Planets">Add Planets</button>
+  <% end %>
+  <div class="product__features " >
+    <div class=" big site-wrapper--padding">
+              <span class="layered-text layered-text-blue">
+                <p class="headline">VIEW ALL PLANETS</p>
+                <p class="headline">VIEW ALL PLANETS</p>
+                <p class="headline">VIEW ALL PLANETS</p>
+                <p class="headline">VIEW ALL PLANETS</p>
+              </span>
+
+
+
+
+<div class="card__collection clear-fix">
+
+  <div class="cards cards--three">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/1ae3f761034031.5a60ebac0ebfd.png" class="img-responsive" alt="">
+    <span class="cards--three__rect-1">
+      <span class="shadow-1"></span>
+        <% @planets.each do |planet| %>
+        <p> <%=link_to planet.name, planet_path(planet) %> </p>
+        <% end %>
+      </span>
+    <span class="cards--three__rect-2">
+      <span class="shadow-2"></span>
+    </span>
+    <span class="cards--three__circle"></span>
+    <ul class="cards--three__list">
+      <li><i class="fab fa-linkedin-in"></i></li>
+    </ul>
+  </div>
+
+</div>
+</div>
+</div>
