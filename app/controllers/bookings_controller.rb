@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
       @booking.save!
       redirect_to user_bookings_path(@user)
     else
-      render :new
+      render "form"
     end
   end
 
