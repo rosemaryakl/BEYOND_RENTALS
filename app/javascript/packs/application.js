@@ -9,8 +9,16 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap";
-import { changeBookingStatusButton } from '../owner-accept-planet-booking'
+// import { changeBookingStatusButton } from '../owner-accept-planet-booking'
+import { addToggleButton, cancelButton } from "../toggle_new_booking_form";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
 document.addEventListener('turbolinks:load', () => {
-  changeBookingStatusButton();
+  // changeBookingStatusButton();
+  addToggleButton();
+  cancelButton();
+  flatpickr(".datepicker", {
+    altInput: true
+  });
 });

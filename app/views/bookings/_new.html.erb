@@ -1,0 +1,13 @@
+<div class="container">
+  <%= simple_form_for [@planet, @booking] do |f| %>
+    <%= f.input :start_date, as: :string, input_html: { class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, input_html: { class: "datepicker" } %>
+    <%= f.input :message %>
+    <div class="buttons"">
+      <%= f.button :submit, "Submit booking request", class: "btn btn-primary" %>
+      <div class="cancel-btn" style="margin-top: 10px;">
+        <%= link_to "Cancel", planet_path, class: "btn btn-secondary", id: "cancel-button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
