@@ -2,8 +2,9 @@
   <div class="d-flex justify-content-between flex-wrap">
   <% if @planets.any? %>
       <% @planets.each do |planet| %>
+      <%= link_to planet_path(planet)  do %>
         <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path planet.photo.key %>)">
-          <h1><%= link_to planet.name, planet_path(planet) %></h1>
+          <h1><%= planet.name %></h1>
         </div>
         <% end  %>
       <% end %>
