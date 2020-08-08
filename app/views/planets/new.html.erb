@@ -7,7 +7,7 @@
     <%= f.input :size, placeholder: 'Radius in km'%>
     <%= f.input :distance_from_sun, placeholder: 'Distance in million km' %>
     <%= f.input :price_per_day %>
-    <%= f.input :image, placeholder: 'Please add a link to your image' %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit %>
   </div>
   <% end %>
