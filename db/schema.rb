@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_08_153558) do
+ActiveRecord::Schema.define(version: 2020_08_10_145044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2020_08_08_153558) do
     t.text "description"
     t.integer "price_per_day"
     t.boolean "inhabited"
-    t.boolean "has_oxygen"
     t.boolean "has_wifi"
     t.boolean "has_starbucks"
     t.bigint "user_id", null: false
@@ -63,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_08_08_153558) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "distance_from_sun"
     t.boolean "has_water"
+    t.boolean "has_oxygen"
     t.index ["user_id"], name: "index_planets_on_user_id"
   end
 

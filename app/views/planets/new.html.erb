@@ -8,14 +8,15 @@
       <%= f.input :size, placeholder: 'Radius in km'%>
       <%= f.input :distance_from_sun, placeholder: 'Distance in million km' %>
       <%= f.input :price_per_day %>
-      <div class="d-flex justify-content-between">
-        <%= f.input :has_oxygen %>
-        <%= f.input :has_wifi %>
-        <%= f.input :has_water %>
-        <%= f.input :has_starbucks %>
+      <div class="d-flex justify-content-between flex-wrap">
+        <%= f.input :inhabited %>
+        <%= f.input :has_oxygen, label: "Oxygen" %>
+        <%= f.input :has_wifi, label: "Wifi" %>
+        <%= f.input :has_water, label: "Water" %>
+        <%= f.input :has_starbucks, label: "Starbucks" %>
       </div>
       <%= f.input :photo, label: "Image", as: :file %>
-      <%= f.submit "Create Planet", class: "btn btn-dark btn btn-block" %>
+      <%= f.submit "Create Planet", class: "btn btn-dark btn-block" %>
   </div>
   <% end %>
   </div>
