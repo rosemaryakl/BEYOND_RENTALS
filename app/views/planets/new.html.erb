@@ -1,15 +1,25 @@
 <div class="container">
-  <h1><strong>Create a planet</strong></h1>
-  <div class="new-planet-form">
-    <%= simple_form_for (@planet) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :size, placeholder: 'Radius in km'%>
-    <%= f.input :distance_from_sun, placeholder: 'Distance in million km' %>
-    <%= f.input :price_per_day %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+  <div class="col-sm-6 offset-sm-3 mt-3 mb-3">
+    <h1><strong>Create a planet</strong></h1>
+    <div class="new-planet-form">
+      <%= simple_form_for (@planet) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :size, placeholder: 'Radius in km'%>
+      <%= f.input :distance_from_sun, placeholder: 'Distance in million km' %>
+      <%= f.input :price_per_day %>
+      <div class="d-flex justify-content-between flex-wrap">
+        <%= f.input :inhabited %>
+        <%= f.input :has_oxygen, label: "Oxygen" %>
+        <%= f.input :has_wifi, label: "Wifi" %>
+        <%= f.input :has_water, label: "Water" %>
+        <%= f.input :has_starbucks, label: "Starbucks" %>
+      </div>
+      <%= f.input :photo, label: "Image", as: :file %>
+      <%= f.submit "Create Planet", class: "btn btn-dark btn-block" %>
   </div>
   <% end %>
+  </div>
+
 </div>
 
