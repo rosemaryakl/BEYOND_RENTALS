@@ -16,7 +16,7 @@ import "flatpickr/dist/flatpickr.min.css";
 
 document.addEventListener('turbolinks:load', () => {
   // changeBookingStatusButton();
-  // addToggleButton();
+  addToggleButton();
   cancelButton();
   flatpickr(".datepicker", {
     altInput: true
