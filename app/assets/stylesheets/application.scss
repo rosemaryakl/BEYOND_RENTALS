@@ -12,6 +12,7 @@
 @import "components/index";
 @import "pages/index";
 @import "components/navbar";
+
 @font-face {
   font-family: SWBaboonType-ExtraBold;
   font-display: swap;
@@ -408,6 +409,7 @@ $color-box-7 : #de8b3e;
 }
 
 
+
 //BUTTONS
 .buttonsubmit2 {
   margin-top:70%;
@@ -423,6 +425,7 @@ $color-box-7 : #de8b3e;
   border: 1px solid black;
   box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px black;
 }
+
 .buttonsubmit2:hover {
   background: #ffa580;
   border: 1px solid black;
