@@ -1,3 +1,5 @@
+@import "pages/index";
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -10,3 +12,55 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+.headline2 {
+  font-family: SWBaboonType-ExtraBold, helvetica, serif;
+
+  font-size:30px;
+    justify-content: space-between;
+    color: #000CDD;
+}
+
+a {
+  color: #000cdd;
+  font-family: SWBaboonType-Light,helvetica,sans-serif;
+  font-size: .9em;
+  font-weight: normal;
+  line-height: 1.55556;
+  text-decoration: underline;
+  transition: color .3s cubic-bezier(.23,1,.32,1);
+  width: auto;
+ text-decoration:none;
+}
+
+
+
+a:hover{
+  color: #FB3B15;
+ text-decoration:none;
+}
+
+.type {
+  font-family: SWBaboonType-Light,helvetica,sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 25px;
+  margin: 0;
+  text-decoration:none;
+}
+.type:hover{
+  color: #FB3B15;
+  text-decoration: none;
+}
+
+ .dropdown-item:hover{
+  color: #FB3B15;
+  text-decoration: none;
+}
+
+
+
+
+
+// class="type header__account-toggle"> -->
