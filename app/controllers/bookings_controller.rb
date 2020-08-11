@@ -1,9 +1,11 @@
 class BookingsController < ApplicationController
-  before_action :find_planet, only: [:new, :create, :index]
-  before_action :find_booking, only: [:edit, :update, :show, :destroy]
+  before_action :find_user, only: :show
+  before_action :find_planet, only: [:new, :create, :show, :accept]
+  before_action :find_booking, only: [:edit, :update, :show, :destroy, :accept]
 
   def index
     @bookings = Booking.all
+    @user = current_user
   end
 
   def show
@@ -21,9 +23,9 @@ class BookingsController < ApplicationController
     @booking.user = @user
     if @booking.save
       @booking.save!
-      redirect_to planet_booking_path(@planet, @booking)
+      redirect_to user_bookings_path(@user)
     else
-      render :new
+      render "form"
     end
   end
 
@@ -50,14 +52,22 @@ class BookingsController < ApplicationController
     end
   end
 
+  def accept
+    @booking.update(status: true)
+    @booking.save!
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :message)
+  end
+
+  def find_user
+    @user = User.find(params[:user_id])
   end
 
   def find_planet
-    # @planet = Planet.find(params[:id])
     @planet = Planet.find(params[:planet_id])
   end
 

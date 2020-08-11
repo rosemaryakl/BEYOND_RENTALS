@@ -1,5 +1,37 @@
 <div class="container">
-  Start date: <%= @booking.start_date %>
-  End Date: <%= @booking.end_date %>
-  <%= link_to "Return to Bookings Page", planet_bookings_path %>
+  <div class="planet-name">
+    <h2>Your booking for: <%= @planet.name %></h2>
+  </div>
+  <div class="dates">
+    <div class="start-date">
+      <strong>Start date:</strong> <%= @booking.start_date %>
+    </div>
+    <div class="end-date">
+      <strong>End Date:</strong> <%= @booking.end_date %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="status-btn">
+    <div class="status-msg">
+      <% if !@booking.status %>
+        <h3 class="booking-not-yet-accepted">Booking not yet accepted</h3>
+      <% else %>
+        <h3 class="booking-accepted">Booking accepted</h3>
+      <% end %>
+    </div>
+    <br>
+    <br>
+    <%= link_to planet_booking_path(@planet, @booking) do %>
+      <button class="btn btn-primary">Accept booking request</button>
+    <% end %>
+    <%# if statement to check current_user against planet.user_id %>
+    <%# if match then show the current_user's planet bookings only %>
+    <%# if the 'status' column is false on a booking, then the button is shown, and change the status on the view to 'not yet accepted' %>
+    <%# else if the 'status' column is true, then make the button unclickable, and change the status on the view to 'accepted'  %>
+  </div>
+  <br>
+  <div class="return-to-bookings-index btn btn-primary">
+    <%= link_to "Return to Bookings Page", planet_bookings_path %>
+  </div>
 </div>

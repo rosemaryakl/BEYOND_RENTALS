@@ -5,6 +5,7 @@ class PlanetsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
@@ -54,6 +55,6 @@ class PlanetsController < ApplicationController
   end
 
   def planet_params
-    params.require(:planet).permit(:name, :size, :distance_from_sun, :price_per_day)
+    params.require(:planet).permit(:name, :size, :distance_from_sun, :price_per_day, :photo, :description, :has_oxygen, :has_wifi, :inhabited, :has_starbucks, :has_water)
   end
 end
