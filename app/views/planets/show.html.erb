@@ -86,16 +86,6 @@
       <% end %>
     </div>
   </div>
-  <div class="drawer-btn">
-    <button class="btn btn-primary js-open-button">Make a booking</button>
-  </div>
-  <div class="Drawer js-drawer" hidden>
-    <div class="container" id="render-container">
-      <%= render "bookings/new", planet: @planet, booking: @booking %>
-    </div>
-  </div>
-  <br>
-  <br>
   <% if current_user.id == @planet.user_id %>
     <div class="owner-links">
       <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
@@ -111,8 +101,14 @@
     </div>
   <% else %>
     <div class="renter-links">
-      <button class="btn btn-success" id="show-new-booking-form">Make a booking</button>
-      <br>
+      <div class="drawer-btn">
+        <button class="btn btn-primary js-open-button">Make a booking</button>
+      </div>
+      <div class="Drawer js-drawer" hidden>
+        <div class="container" id="render-container">
+          <%= render "bookings/new", planet: @planet, booking: @booking %>
+        </div>
+      </div>
       <br>
       <%= link_to "Back to base", planets_path, class: "btn btn-info" %>
     </div>
