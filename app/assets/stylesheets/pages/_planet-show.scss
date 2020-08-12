@@ -33,3 +33,83 @@
     margin: 0px;
   }
 }
+
+
+// NEW BOOKING FORM DRAWER CSS
+
+.Drawer {
+  background: #eee;
+  box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.6);
+
+  /* Give our drawer a base width */
+  width: 100%;
+
+  /* Position the drawer on the right edge of the screen */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+
+  /* Slide the drawer _past_ the right edge of the screen */
+  transform: translateX(100%);
+
+  /* Transition our horizontal slide */
+  transition: transform ease-out 0.5s;
+
+  /* Misc */
+
+  text-align: center;
+}
+
+.Drawer.is-open {
+  /* Slide the drawer back in when it's "open" */
+  transform: translateX(0);
+  background-image: url('https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1940&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+/**
+ * The following styles are unrelated to our primary transition.
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main,
+.Drawer {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.Button {
+
+  cursor: pointer;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 0.3s;
+}
+
+.Button:hover,
+.Button:focus {
+  background: #2395eb;
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.Button:active {
+  background: #1c90e8;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  transform: translateY(0) scale(0.975);
+}
+
+div#render-container {
+  margin: 0px 650px;
+}
