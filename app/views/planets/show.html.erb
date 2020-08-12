@@ -7,80 +7,96 @@
       <h1><%= @planet.name %></h1>
   </div>
 <% end %>
-
 <div class="container">
-  <div class="planet-info">
-    <ul class="planet-attr-list" style="display: flex; justify-content: space-between; list-style: none; margin-top: 30px;">
-      <li>
-        <strong>Size:</strong> <%= @planet.size %> km
-      </li>
-      <li>
-        <strong>Distance from Earth:</strong> <%= @planet.distance_from_sun %> million km
-      </li>
-      <li>
-        <strong>Price per day:</strong> £<%= @planet.price_per_day %>
-      </li>
-      <li>
-        <strong>Description:</strong> <%= @planet.description %>
-      </li>
-    </ul>
-    <div class="planet-attr-icons" style="display: flex; justify-content: space-between; margin-top: 50px;">
+  <div class= "mt-4">
+    <%= @planet.description %>
+  </div>
+  <div class="row mt-4">
+    <div class="col-sm-8">
+      <ul id="planet-attr-list">
+        <li>
+          <strong>Size:</strong> <%= @planet.size %> km
+        </li>
+        <li>
+          <strong>Distance from Sun:</strong> <%= @planet.distance_from_sun %> million km
+        </li>
+        <li>
+          <strong>Price per day:</strong> £<%= @planet.price_per_day %>
+        </li>
+      </ul>
+    </div>
+    <div id="planet-attr-icons" class="col-sm-4">
+      <p style="text-align: center; margin: 16px;"><strong>Amenities</strong></p>
+      <ul style="list-style: none">
       <% if @planet.inhabited %>
-        <i class="fas fa-users" style="color: #167ffb; font-size: 46px;" title="Is inhabited"></i>
+        <li style="text-align: center">
+          <i class="fas fa-users" style="color: #167ffb; " title="Is inhabited"></i>
+          <p style="color: #167ffb">Inhabited</p>
+        </li>
       <% else %>
-        <i class="fas fa-users" style="color: grey; font-size: 46px;" title="Is not inhabited"></i>
+        <li style="text-align: center">
+          <i class="fas fa-users" style="color: grey; opacity: 0.2;" title="Is not inhabited"></i>
+          <p style="opacity: 0.2;">Inhabited</p>
+        </li>
       <% end %>
-      <% if @planet.has_oxygen %>
-        <i class="fas fa-lungs" style="color: #167ffb; font-size: 46px;" title="Has oxygen"></i>
+        <% if @planet.has_oxygen %>
+        <li style="text-align: center">
+          <i class="fas fa-lungs" style="color: #167ffb;" title="Has oxygen"></i>
+          <p style="color: #167ffb">Oxygen</p>
+        </li>
       <% else %>
-        <i class="fas fa-lungs" style="color: grey; font-size: 46px;" title="Does not have oxygen"></i>
+        <li style="text-align: center">
+          <i class="fas fa-lungs" style="color: grey; opacity: 0.2;" title="Does not have oxygen"></i>
+          <p style="opacity: 0.2;">Oxygen</p>
+        </li>
       <% end %>
-      <% if @planet.has_water %>
-        <i class="fas fa-tint" style="color: #167ffb; font-size: 46px;" title="Has water"></i>
+        <% if @planet.has_water %>
+        <li style="text-align: center">
+          <i class="fas fa-tint" style="color: #167ffb;" title="Has water"></i>
+          <p style="color: #167ffb">Water</p>
+        </li>
       <% else %>
-        <i class="fas fa-tint" style="color: grey; font-size: 46px;" title="Does not have water"></i>
+        <li style="text-align: center">
+          <i class="fas fa-tint" style="color: grey; opacity: 0.2;" title="Does not have water"></i>
+          <p style="opacity: 0.2;">Water</p>
+        </li>
       <% end %>
-      <% if @planet.has_wifi %>
-        <i class="fas fa-wifi" style="color: #167ffb; font-size: 46px;" title="Has WiFi"></i>
+        <% if @planet.has_wifi %>
+        <li style="text-align: center">
+          <i class="fas fa-wifi" style="color: #167ffb;" title="Has WiFi"></i>
+          <p style="color: #167ffb"> Wifi</p>
+        </li>
       <% else %>
-        <i class="fas fa-wifi" style="color: grey; font-size: 46px;" title="Does not have WiFi"></i>
+        <li style="text-align: center">
+          <i class="fas fa-wifi" style="color: grey; opacity: 0.2;" title="Does not have WiFi"></i>
+          <p style="opacity: 0.2;">Wifi</p>
+        </li>
       <% end %>
       <% if @planet.has_starbucks %>
-        <i class="fas fa-coffee" style="color: #167ffb; font-size: 46px;" title="Has Starbucks"></i>
+        <li style="text-align: center">
+          <i class="fas fa-coffee" style="color: #167ffb;" title="Has Starbucks"></i>
+          <p style="color: #167ffb">Starbucks</p>
+        </li>
       <% else %>
-        <i class="fas fa-coffee" style="color: grey; font-size: 46px;" title="Does not have Starbucks"></i>
+        <li style="text-align: center">
+          <i class="fas fa-coffee" style="color: grey; opacity: 0.2;" title="Does not have Starbucks"></i>
+          <p style="opacity: 0.2;">Starbucks</p>
+        </li>
+      </ul>
       <% end %>
     </div>
   </div>
-
-
-
-
   <div id="new-booking-form" hidden>
   <h2 style="text-align: center;">Your new booking request:</h2>
     <%= render "bookings/new", planet: @planet, booking: @booking %>
   </div>
-
-
-
-
   <% if current_user.id == @planet.user_id %>
     <div class="owner-links">
       <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
-
-
-
-
       <%= link_to "Edit this planet", edit_planet_path(@planet), class: "btn btn-secondary" %>
-
-
-
-
       <%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
         <i class="fas fa-bomb"></i> Exterminate
       <% end %>
-
-
     </div>
   <% else %>
     <div class="renter-links">
