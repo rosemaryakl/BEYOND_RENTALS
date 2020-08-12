@@ -52,32 +52,39 @@
       <% end %>
     </div>
   </div>
-  <br>
-  <br>
+
+
+
+
   <div id="new-booking-form" hidden>
   <h2 style="text-align: center;">Your new booking request:</h2>
     <%= render "bookings/new", planet: @planet, booking: @booking %>
   </div>
-  <br>
-  <br>
+
+
+
+
   <% if current_user.id == @planet.user_id %>
     <div class="owner-links">
       <%= link_to "Back to base", planets_path, class: "btn btn-primary" %>
-      <br>
-      <br>
+
+
+
+
       <%= link_to "Edit this planet", edit_planet_path(@planet), class: "btn btn-secondary" %>
-      <br>
-      <br>
+
+
+
+
       <%= link_to planet_path(@planet), method: :delete, data: { confirm: "Charging the Death Star... Fire?" } do %>
         <i class="fas fa-bomb"></i> Exterminate
       <% end %>
-      <br>
+
+
     </div>
   <% else %>
     <div class="renter-links">
       <button class="btn btn-success" id="show-new-booking-form">Make a booking</button>
-      <br>
-      <br>
       <%= link_to "Back to base", planets_path, class: "btn btn-info" %>
     </div>
   <% end %>
