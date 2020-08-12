@@ -1,5 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
+  align-items: center;
   background: white;
 }
 
@@ -7,6 +8,22 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+.nav-link {
+  text-decoration: none;
+}
+
+.dropdown-item {
+  text-decoration: none;
+}
+
+
+.navbar-brand {
+  text-decoration: none;
+  p {
+  margin-bottom: 0px;
+  color: #000cdd;
+  font-family: SWBaboonType-Light, helvetica, sans-serif;
+  font-weight: bold;
+}
 }
