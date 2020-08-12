@@ -7,7 +7,7 @@ function showNewBookingForm() {
 };
 
 export function addToggleButton() {
-  const newBookingFormBtn = document.querySelector("#show-new-booking-form");
+  const newBookingFormBtn = document.querySelector(".js-open-button");
   newBookingFormBtn.addEventListener('click', showNewBookingForm);
 };
 
