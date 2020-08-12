@@ -1,13 +1,18 @@
 <div class="container">
-  <%= simple_form_for [@planet, @booking] do |f| %>
-    <%= f.input :start_date, as: :string, input_html: { class: "datepicker"} %>
-    <%= f.input :end_date, as: :string, input_html: { class: "datepicker" } %>
-    <%= f.input :message %>
-    <div class="buttons"">
-      <%= f.button :submit, "Submit booking request", class: "btn btn-primary" %>
-      <div class="cancel-btn" style="margin-top: 10px;">
-        <%= link_to "Cancel", planet_path, class: "btn btn-secondary", id: "cancel-button" %>
-      </div>
+  <div id="new-booking-container">
+    <div class="new-booking-title">
+      <h2 class="new-booking-title">Your booking request</h2>
     </div>
-  <% end %>
+    <%= simple_form_for [@planet, @booking] do |f| %>
+      <%= f.input :start_date, as: :string, input_html: { class: "datepicker"}, label_html: { class: 'labels' } %>
+      <%= f.input :end_date, as: :string, input_html: { class: "datepicker" }, label_html: { class: 'labels' } %>
+      <%= f.input :message, label_html: { class: 'labels' } %>
+      <div class="buttons">
+        <%= f.button :submit, "Submit booking request", class: "btn btn-success btn-lg" %>
+        <div class="cancel-btn" style="margin-top: 10px;">
+          <%= link_to "Cancel", planet_path, class: "btn btn-secondary js-close-button", id: "cancel-button" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
