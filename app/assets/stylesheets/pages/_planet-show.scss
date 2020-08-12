@@ -1,0 +1,32 @@
+ #planet-attr-list {
+  list-style: none;
+  margin-top: 30px;
+  padding: 0px;
+  li {
+    margin-top: 16px;
+  }
+ }
+
+#planet-attr-icons {
+
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  i {
+    font-size: 32px;
+  }
+  ul {
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  li {
+    padding: 18px;
+  }
+  p {
+    margin: 0px;
+  }
+}
+
