@@ -1,23 +1,26 @@
-<div id="planets-gallery" class="container">
-  <div class="d-flex justify-content-between flex-wrap">
-  <% if @planets.any? %>
-      <% @planets.each do |planet| %>
-        <% if planet.photo.attached? %>
-          <%= link_to planet_path(planet)  do %>
-            <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path planet.photo.key %>)">
-              <h1><%= planet.name %></h1>
-            </div>
-          <% end  %>
-        <% else %>
-          <%= link_to planet_path(planet)  do %>
-            <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.pngitem.com/pimgs/m/32-327361_planet-saturn-saturn-planet-drawing-hd-png-download.png)">
-              <h1><%= planet.name %></h1>
-            </div>
-          <% end  %>
+<body style="background-image: url(https://res.cloudinary.com/mberthier/image/upload/v1597329943/stars_kgzgyj.png);">
+  <div id="planets-gallery" class="container">
+    <div class="d-flex justify-content-between flex-wrap">
+    <% if @planets.any? %>
+        <% @planets.each do |planet| %>
+          <% if planet.photo.attached? %>
+            <%= link_to planet_path(planet)  do %>
+              <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path planet.photo.key %>)">
+                <h1><%= planet.name %></h1>
+              </div>
+            <% end  %>
+          <% else %>
+            <%= link_to planet_path(planet)  do %>
+              <div class="card-category-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.pngitem.com/pimgs/m/32-327361_planet-saturn-saturn-planet-drawing-hd-png-download.png)">
+                <h1><%= planet.name %></h1>
+              </div>
+            <% end  %>
+          <% end %>
         <% end %>
-      <% end %>
-  <% else %>
-    <h3>There are no planets, please check back later for any new listings.</h3>
-  <% end %>
+    <% else %>
+      <h3>There are no planets, please check back later for any new listings.</h3>
+    <% end %>
+    </div>
   </div>
-</div>
+</body>
+
