@@ -1,5 +1,12 @@
 body {
   height: fit-content;
+  background-color: #000000;
+}
+
+.bookings-index-background {
+  background-image: url('https://res.cloudinary.com/mberthier/image/upload/v1597329943/stars_kgzgyj.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .your-bookings-header {
@@ -8,7 +15,28 @@ body {
   margin-top: 10px;
 }
 
+
 // PLANET LIST
+
+.booking-flex-box {
+  display: flex;
+}
+
+.planet-info-left {
+  width: 50%;
+}
+
+.planet-info-right {
+  width: 50%;
+  place-self: center;
+  text-align-last: center;
+}
+
+// PLANET IMAGE
+.planet-img {
+  width: 400px;
+  height: 100%;
+}
 
 .booking-list {
   margin: 20px 0px;
@@ -18,21 +46,21 @@ body {
 
 // PLANET NAME
 .planet-name {
-  color: #000000;
+  color: #ffffff;
   margin-bottom: 40px;
 }
 
 li.booking-info {
   list-style: none;
-  margin: 0px 0px 50px 0px;
-  border-bottom: 2px solid #000000;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin: 0px 0px 39px 0px;
+  border-bottom: 2px solid #ffffff;
+  padding-top: 0px;
+  padding-bottom: 25px;
 }
 
 // BOOKING DATES
 .booking-dates {
-  color: #3a1bec;
+  color: #7fcfef;
   margin-bottom: 30px;
 }
 
@@ -48,6 +76,7 @@ li.booking-info {
   margin-right: 906px;
   padding: 8px;
   text-align: center;
+  width: 230px;
 }
 
 .status-info p.booking-not-yet-accepted {
@@ -56,4 +85,5 @@ li.booking-info {
   margin-right: 841px;
   padding: 8px;
   text-align: center;
+  width: 230px;
 }
