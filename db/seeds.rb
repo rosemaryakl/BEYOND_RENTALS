@@ -7,7 +7,7 @@ User.delete_all
 
 # User seeds
 users = [
-  renter_user = ['renter@user.com', '123456'],
+  renter_user = ['e.ripley@gmail.com', '123456'],
   owner_user = ['owner@user.com', '123456']
 ]
 
