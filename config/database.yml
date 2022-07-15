@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
+# production:
+#   <<: *default
   # database: BEYOND_RENTALS_production
   # username: BEYOND_RENTALS
   # password: <%= ENV['BEYOND_RENTALS_DATABASE_PASSWORD'] %>
