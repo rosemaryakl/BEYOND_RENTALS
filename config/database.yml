@@ -80,6 +80,9 @@ test:
 #
 production:
   <<: *default
-  database: BEYOND_RENTALS_production
-  username: BEYOND_RENTALS
-  password: <%= ENV['BEYOND_RENTALS_DATABASE_PASSWORD'] %>
+  # database: BEYOND_RENTALS_production
+  # username: BEYOND_RENTALS
+  # password: <%= ENV['BEYOND_RENTALS_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
